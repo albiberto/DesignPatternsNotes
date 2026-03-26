@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="11.0.0-preview.2.26159.112"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\DesignPatternsNotes.Behavioral\DesignPatternsNotes.Behavioral.csproj" />
+        <ProjectReference Include="..\DesignPatternsNotes.Core\DesignPatternsNotes.Core.csproj"/>
+        <ProjectReference Include="..\DesignPatternsNotes.Creational\DesignPatternsNotes.Creational.csproj" />
+        <ProjectReference Include="..\DesignPatternsNotes.Structural\DesignPatternsNotes.Structural.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -2,5 +2,5 @@ namespace DesignPatternsNotes.Core;
 
 public interface IDisplay
 {
-    public void WriteLine(string? value);
+    public void WriteLine(string? value = null);
 }

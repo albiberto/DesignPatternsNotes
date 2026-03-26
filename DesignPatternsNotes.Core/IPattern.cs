@@ -7,6 +7,7 @@ public interface IPattern
     public string Description { get; }
     public string Problem { get; }
     public string Solution { get; }
+    public string Applicability { get; }
     
     public (string Category, string Name) Key => (Category, Name);
     

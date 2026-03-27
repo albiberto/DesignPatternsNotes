@@ -1,6 +1,6 @@
     using DesignPatternsNotes.Core;
 
-    namespace DesignPatternsNotes.Creational;
+    namespace DesignPatternsNotes.Creational.Abstract;
 
     public interface ICreational : IPattern
     {

@@ -1,4 +1,5 @@
 using DesignPatternsNotes.Core;
+using DesignPatternsNotes.Creational.Abstract;
 using SingletonClass =  DesignPatternsNotes.Creational.Singleton.Singleton;
 
 namespace DesignPatternsNotes.Creational;
@@ -26,27 +27,22 @@ public class SingletonPattern(IDisplay display) : ICreational
                                               All following calls to this method return the cached object. 
                                       """;
 
-    public string Applicability { get; } = """
-                                              Use the Singleton pattern when a class in your program should have just a single instance available to all clients.
-                                           """;
+    public string Applicability { get; } = "Use the Singleton pattern when a class in your program should have just a single instance available to all clients.";
 
     public void Run()
     {
         var s1 = SingletonClass.GetInstance();
         var s2 = SingletonClass.GetInstance();
-
-        var message = """
-                      var s1 = SingletonClass.GetInstance();
-                      var s2 = SingletonClass.GetInstance();
-                      """;
         
-        display.WriteLine(message);
-        display.WriteLine();
+        display.WriteSpacedLine("""
+                          var s1 = SingletonClass.GetInstance();
+                          var s2 = SingletonClass.GetInstance();
+                          """);
 
-        message = s1 == s2 
+        display.WriteSpacedLine("s1 == s2;");
+        
+        display.WriteLine(s1 == s2 
             ? "Singleton works, both variables contain the same instance." 
-            : "Singleton failed, variables contain different instances.";
-        
-        Console.WriteLine(message);
+            : "Singleton failed, variables contain different instances.");
     }
 }

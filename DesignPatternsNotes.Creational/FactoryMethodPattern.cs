@@ -6,7 +6,7 @@ namespace DesignPatternsNotes.Creational;
 
 public class FactoryMethodPattern(IDisplay display) : ICreational
 {
-    public string Name { get; } = "Factory";
+    public string Name { get; } = "Factory Method";
     public string Description { get; } = "Factory Method is a creational design patter that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of object that will be created.";
 
     public string Problem { get; } = """
